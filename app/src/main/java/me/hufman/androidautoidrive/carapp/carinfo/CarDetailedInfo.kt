@@ -89,11 +89,11 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
 		"$lat $long ${L.CARINFO_GFORCE}"
 	}
 	val gforceLat = cdsMetrics.accel.map { accel ->
-		val lat = accel.first?.let {"↔%+.2f".format(it/9.8)} ?: ""
+		val lat = accel.first?.let {"↔%+.2f".format(it / 9.8)} ?: ""
 		"$lat"
 	}
 	val gforceLong = cdsMetrics.accel.map { accel ->
-		val long = accel.second?.let {"↕%+.2f".format(it/9.8)} ?: ""
+		val long = accel.second?.let {"↕%+.2f".format(it / 9.8)} ?: ""
 		"$long ${L.CARINFO_GFORCE}"
 	}
 
@@ -107,20 +107,20 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
 		// bit 5 -> value 16 -> Fullstop (when the vehicle is standing still, only when engine is running)
 
 		// Choosing the "most interesting" bit in the right order because multiple bits might be set
-		var brakeString = "Not braking"
+		var brakeString = "Keine Bremse"
 		if (brakeContact?.and(8) == 8) {
-			brakeString = "Cruise Control"
+			brakeString = "Fahrassistent"
 		} else if (brakeContact?.and(4) == 4) {
-			brakeString = "Strong"
+			brakeString = "Stark"
 		} else if (brakeContact?.and(2) == 2) {
-			brakeString = "Soft"
+			brakeString = "Leicht"
 		}
 		// Adding the parking brake info
 		if (parkingBrakeSet) {
-			if (brakeString == "Not braking") {
-				brakeString = "( ! )"
+			if (brakeString == "Keine Bremse") {
+				brakeString = "Θ ⛔"
 			} else {
-				brakeString += " ( ! )"
+				brakeString += " Θ ⛔"
 			}
 		}
 		brakeString
