@@ -76,7 +76,7 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
 	}.map { "$it ${L.CARINFO_STEERING}" }
 	val speed = cdsMetrics.speedActual.format("%.0f").addPlainUnit(unitsSpeedLabel)
 	val speedGPS = cdsMetrics.speedGPS.format("%.0f").addPlainUnit(unitsSpeedLabel)
-	val torque =cdsMetrics.torque.format("%.0fNM").map { "$it ${L.CARINFO_TORQUE}" }
+	val torque =cdsMetrics.torque.format("%.0fNm").map { "$it ${L.CARINFO_TORQUE}" }
 	val engineRpm = cdsMetrics.engineRpm.map { "$it ${L.CARINFO_RPM}"}
 	val heading = cdsMetrics.heading.map { heading ->
 		val direction = CDSMetrics.compassDirection(heading)
@@ -84,16 +84,16 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
 		"$arrow $direction (${heading.toInt()}°)"
 	}
 	val gforces = cdsMetrics.accel.map { accel ->
-		val lat = accel.first?.let { "↔%.2f".format(it / 9.8) } ?: ""
-		val long = accel.second?.let { "↕%.2f".format(it / 9.8) } ?: ""
+		val lat = accel.first?.let { "↔%+.2f".format(it / 9.8) } ?: ""
+		val long = accel.second?.let { "↕%+.2f".format(it / 9.8) } ?: ""
 		"$lat $long ${L.CARINFO_GFORCE}"
 	}
 	val gforceLat = cdsMetrics.accel.map { accel ->
-		val lat = accel.first?.let {"↔%.2f".format(it/9.8)} ?: ""
+		val lat = accel.first?.let {"↔%+.2f".format(it/9.8)} ?: ""
 		"$lat"
 	}
 	val gforceLong = cdsMetrics.accel.map { accel ->
-		val long = accel.second?.let {"↕%.2f".format(it/9.8)} ?: ""
+		val long = accel.second?.let {"↕%+.2f".format(it/9.8)} ?: ""
 		"$long ${L.CARINFO_GFORCE}"
 	}
 
