@@ -83,19 +83,40 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
 		val arrow = CDSMetrics.compassArrow(heading)
 		"$arrow $direction (${heading.toInt()}°)"
 	}
+
 	val gforces = cdsMetrics.accel.map { accel ->
-		val lat = accel.first?.let { "↔ %+.2f".format(it / 9.8) } ?: ""
+//		val lat = accel.first?.let { "↔ %+.2f".format(it / 9.8) } ?: ""
+		val lat = accel.first?.let {
+			(if (it > 0) {"→"} else if (it < 0) {"←"} else {"↔"}) +
+					"%.2f".format(it.absoluteValue / 9.8)
+		} ?: ""
 		val long = accel.second?.let { "↕%+.2f".format(it / 9.8) } ?: ""
-		"$lat $long".replace("-", "－") + "${L.CARINFO_GFORCE}"
+		"$lat $long".replace("-", "–") + "${L.CARINFO_GFORCE}" // geht das so? ohne $
+		// U+FF0D zu lang; U+2012 fast gut, nur ein wenig zu lang; U+2013 sieht gut aus
 	}
+
+/*
 	val gforceLat = cdsMetrics.accel.map { accel ->
 		val lat = accel.first?.let {"↔ %+.2f".format(it / 9.8)} ?: ""
 		"$lat".replace("-", "－") // U+FF0D
 	}
+ */
+	val gforceLat = cdsMetrics.accel.map { accel ->
+		val lat = accel.first?.let {
+			(if (it < 0) {"→"} else if (it > 0) {"←"} else {"↔"}) +
+				"%.2f".format(it.absoluteValue / 9.8)
+		} ?: ""
+		"$lat"
+	}
 	val gforceLong = cdsMetrics.accel.map { accel ->
 		val long = accel.second?.let {"↕%+.2f".format(it / 9.8)} ?: ""
-		"$long".replace("-", "－") + "${L.CARINFO_GFORCE}"
+		"$long".replace("-", "–") + "${L.CARINFO_GFORCE}"
 	}
+
+/*	val gforce = cdsMetrics.accel.map { accel ->
+ 		"$gforceLat $gforceLong"
+	}
+*/
 
 	// advanced driving fields that aren't translated
 	val brakeState = cdsMetrics.brake.combine(cdsMetrics.parkingBrakeSet) { brakeContact, parkingBrakeSet ->
