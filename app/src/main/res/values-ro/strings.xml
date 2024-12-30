@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AAIdrive</string>
+    <string name="app_name">AAiDrive</string>
     <string name="permlab_accessNotifications">Acces notificări IDrive</string>
     <string name="permlab_bindNotificationListenerService">Acces notificări IDrive</string>
     <string name="permdesc_accessNotifications">Acces notificări IDrive</string>
     <string name="permdesc_bindNotificationListenerService">Acces notificări IDrive</string>
-    <string name="notification_title">AAIdrive</string>
+    <string name="notification_title">AAiDrive</string>
     <string name="notification_description">Conectat la mașină</string>
     <string name="notification_description_chassiscode">Conectat la %s</string>
     <string name="notification_description_bmw">Conectat la BMW</string>
@@ -31,10 +31,10 @@
     <string name="lbl_navigation_listener_unsuccess">Eroare</string>
     <!-- Welcome pages -->
     <string name="lbl_welcome_heading">Conectare</string>
-    <string name="lbl_welcome_intro">AAIDrive este o aplicatie neoficiala, care adauga muzica, aplicatii si alte caracteristici de pe telefon pe automobil prin protocolul nativ BMW Apps</string>
+    <string name="lbl_welcome_intro">AAiDrive este o aplicatie neoficiala, care adauga muzica, aplicatii si alte caracteristici de pe telefon pe automobil prin protocolul nativ BMW Apps</string>
     <string name="lbl_welcome_compatible">Incepand cu MY2014 sau mai nou, sunt compatibile masinile BMW sau MINI echipate cu NBT sau NBT Evo (echipate cu IDrive 4-6) si cu o subscriptie online activa la BMW Connected Drive</string>
     <string name="lbl_welcome_dependencies">Conectarea la masina depinde de conexiunea aplicatiei BMW/MINI Connected, MyBMW sau MINI la masina.</string>
-    <string name="lbl_welcome_complete">AAIDrive adauga o multime de alte functii masinii tale, incearca-l!</string>
+    <string name="lbl_welcome_complete">AAiDrive adauga o multime de alte functii masinii tale, incearca-l!</string>
     <!-- Menu Titles -->
     <string name="menu_overview">General</string>
     <string name="menu_setup">Configurare</string>
@@ -50,7 +50,7 @@
     <string name="menu_settings">Setări</string>
     <string name="menu_support">Suport</string>
     <string name="btn_next">Următorul</string>
-    <string name="lbl_overviewpage">AAIdrive integrează unele aplicații de muzică și notificările din telefon via protocolul BMW Apps</string>
+    <string name="lbl_overviewpage">AAiDrive integrează unele aplicații de muzică și notificările din telefon via protocolul BMW Apps</string>
     <string name="lbl_connectionpage">Conecțiunea pentru aplicații a mașinii depinde de câteva piese, și aici aveți câteva sfaturi pentru a vă asigura că funcționează corect</string>
     <plurals name="lbl_assistantpage">
         <item quantity="one">Asistenții vocali ai telefonului sunt adăugați ca o aplicație Connected, în cazul în care sistemul mașinii nu îi declanșează</item>
@@ -87,7 +87,7 @@
     <string name="lbl_calendar_calendars_empty">Nici un calendar găsit</string>
     <string name="lbl_calendar_upcoming_events">Evenimente viitoare:</string>
     <string name="lbl_calendar_upcoming_events_empty">Nu s-au găsit evenimente viitoare în această lună</string>
-    <string name="lbl_mapspage">AAIdrive include o hartă personalizată care este redată intern pe telefon şi afişată în maşină</string>
+    <string name="lbl_mapspage">AAiDrive include o hartă personalizată care este redată intern pe telefon şi afişată în maşină</string>
     <string name="enable_custom_maps">Activare hartă personalizată</string>
     <string name="lbl_map_bt_hint">Performanța și calitatea hărții când este conectat prin Bluetooth vor fi slabe</string>
     <string name="lbl_map_phone_gps">Utilizează GPS de telefon în loc de GPS masinii</string>
@@ -154,18 +154,18 @@
     <string name="lbl_language_prefercar">Preferă limba mașinii vs. limba telefonului</string>
     <string name="lbl_language_prefercar_code">Preferă limba mașinii (%s) în loc de limba telefonului</string>
     <string name="lbl_language_forcelanguage">Forțează o anumită limbă</string>
-    <string name="lbl_analytics_intro">AAIdrive este un proiect neoficial de hobby, care nu este susţinut sau aprobat de BMW în nici un fel, pornind de la un protocol de inginerie inversă. Sunt mândru de funcționalitatea și stabilitatea sa, dar probleme in functionare se mai pot întâmpla. Te rugăm să iei în considerare posibilitatea de a se trimite automat orice raport de eroare pentru depanare.</string>
+    <string name="lbl_analytics_intro">AAiDrive este un proiect neoficial de hobby, care nu este susţinut sau aprobat de BMW în nici un fel, pornind de la un protocol de inginerie inversă. Sunt mândru de funcționalitatea și stabilitatea sa, dar probleme in functionare se mai pot întâmpla. Te rugăm să iei în considerare posibilitatea de a se trimite automat orice raport de eroare pentru depanare.</string>
     <string name="lbl_analytics_description">Pe lângă rapoartele de defecțiune, activarea analitică va încărca, de asemenea, lista de aplicații muzicale instalate și unele informații anonime despre automobile, pentru a ajuta la prioritizarea dezvoltării caracteristicilor.</string>
     <string name="lbl_analytics_enabled">Activați analiza și raportarea erorilor</string>
-    <string name="lbl_donations_volunteer">AAIdrive este un proiect voluntar</string>
+    <string name="lbl_donations_volunteer">AAiDrive este un proiect voluntar</string>
     <string name="lbl_donations_request">Dacă îți place proiectul și ți se pare util, consideră să îți arăți suportul donând:</string>
     <string name="btn_donations">Donează</string>
     <string name="lbl_support_other_ways">Poți ajuta proiectul și în alte moduri:</string>
     <string name="lbl_support_feedback">Oferă feedback</string>
     <string name="lbl_support_issues">Deschide issue-uri</string>
     <string name="lbl_support_share">Dă mai departe</string>
-    <string name="lbl_support_privacy">Confidențialitatea contează, de aceea AAIdrive nu colectează, stochează sau partajează date personale. Apasă aici pentru a afla mai multe…</string>
-    <string name="lbl_support_thanks">Mulțumim că folosiți AAIdrive!</string>
+    <string name="lbl_support_privacy">Confidențialitatea contează, de aceea AAiDrive nu colectează, stochează sau partajează date personale. Apasă aici pentru a afla mai multe…</string>
+    <string name="lbl_support_thanks">Mulțumim că folosiți AAiDrive!</string>
     <string name="lbl_ok">Ok</string>
     <string name="lbl_cancel">Anulare</string>
     <string name="btn_configure">Configurare …</string>
@@ -198,7 +198,7 @@
     <string name="txt_setup_security_missing">Serviciul de securitate nu poate fi atins:</string>
     <string name="txt_setup_background_killed">Aplicația a fost închisă în timpul conectării la mașină</string>
     <string name="txt_setup_background_suspended">Aplicația a fost întreruptă în fundal în timpul conectării la mașină</string>
-    <string name="txt_setup_background_restrictions_hint">Verifică permisiunile telefonului și setările bateriei pentru a permite AAIdrive să ruleze în fundal</string>
+    <string name="txt_setup_background_restrictions_hint">Verifică permisiunile telefonului și setările bateriei pentru a permite AAiDrive să ruleze în fundal</string>
     <string name="btn_install">Instalare</string>
     <string name="btn_install_bmwmine">Instalați aplicația MyBMW</string>
     <string name="btn_install_minimine">Instalați aplicația MINI</string>
@@ -468,7 +468,7 @@
     <string name="MUSIC_TURN_REPEAT_ALL_ON">Pornește repetare tot</string>
     <string name="MUSIC_TURN_REPEAT_ONE_ON">Pornește repetă una</string>
     <string name="MUSIC_TURN_REPEAT_OFF">Oprește repetare</string>
-    <string name="MUSIC_TEMPORARY_PLAYLIST_DESCRIPTION">Listă de redare temporară AAIdrive</string>
+    <string name="MUSIC_TEMPORARY_PLAYLIST_DESCRIPTION">Listă de redare temporară AAiDrive</string>
     <plurals name="MUSIC_ACTION_SEEK_BACK">
         <item quantity="one">Derulează înapoi %s secundă</item>
         <item quantity="few">Derulează înapoi %s secunde</item>

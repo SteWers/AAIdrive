@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AAIdrive</string>
+    <string name="app_name">AAiDrive</string>
     <string name="permlab_accessNotifications">IDrive 通知访问</string>
     <string name="permlab_bindNotificationListenerService">IDrive 通知访问</string>
     <string name="permdesc_accessNotifications">IDrive 通知访问</string>
     <string name="permdesc_bindNotificationListenerService">IDrive 通知访问</string>
-    <string name="notification_title">AAIdrive</string>
+    <string name="notification_title">AAiDrive</string>
     <string name="notification_description">连接至车辆</string>
     <string name="notification_description_chassiscode">连接至 %s</string>
     <string name="notification_description_bmw">连接至 BMW</string>
@@ -31,10 +31,10 @@
     <string name="lbl_navigation_listener_unsuccess">失败</string>
     <!-- Welcome pages -->
     <string name="lbl_welcome_heading">开始连接</string>
-    <string name="lbl_welcome_intro">AAIdrive 是一款用户自行开发app，使用原生BMW Apps 协议，支持将手机音乐和其他功能连接到车辆</string>
+    <string name="lbl_welcome_intro">AAiDrive 是一款用户自行开发app，使用原生BMW Apps 协议，支持将手机音乐和其他功能连接到车辆</string>
     <string name="lbl_welcome_compatible">兼容大多数MY2014或更新款BMW/MINI（装载基于IDrive 4–6的NBT/NBT Evo），激活的ConnectedDrive 或 BMW Online 订阅</string>
     <string name="lbl_welcome_dependencies">连接至车辆的apps取决于已连接的BMW/MINI或新款MyBMW/Mini app </string>
-    <string name="lbl_welcome_complete">AAIdrive 还可给车辆增加其他功能, 欢迎试用!</string>
+    <string name="lbl_welcome_complete">AAiDrive 还可给车辆增加其他功能, 欢迎试用!</string>
     <!-- Menu Titles -->
     <string name="menu_overview">概览</string>
     <string name="menu_setup">设置</string>
@@ -50,7 +50,7 @@
     <string name="menu_settings">设置</string>
     <string name="menu_support">支持</string>
     <string name="btn_next">继续</string>
-    <string name="lbl_overviewpage">AAIdrive 通过BMW Apps协议将您的手机音乐app和手机通知集成到车上</string>
+    <string name="lbl_overviewpage">AAiDrive 通过BMW Apps协议将您的手机音乐app和手机通知集成到车上</string>
     <string name="lbl_connectionpage">以下方法可以帮助app连接到车辆</string>
     <plurals name="lbl_assistantpage">
         <item quantity="other">如果车载语音没有自动激活，您的手机语音助手已连接至车辆</item>
@@ -84,7 +84,7 @@
     <string name="lbl_calendar_calendars_empty">未找到日历事件</string>
     <string name="lbl_calendar_upcoming_events">即将到来的事件：</string>
     <string name="lbl_calendar_upcoming_events_empty">本月未发现即将到来的事件</string>
-    <string name="lbl_mapspage">AAIdriver 包含一个自定义地图，这个地图是在手机内部渲染，并显示在车上</string>
+    <string name="lbl_mapspage">AAiDriver 包含一个自定义地图，这个地图是在手机内部渲染，并显示在车上</string>
     <string name="enable_custom_maps">启用自定义地图</string>
     <string name="lbl_map_bt_hint">通过蓝牙连接时地图性能和质量将很差</string>
     <string name="lbl_map_phone_gps">使用手机GPS而不是汽车GPS</string>
@@ -151,18 +151,18 @@
     <string name="lbl_language_prefercar">优先考虑车辆语言，其次手机语言</string>
     <string name="lbl_language_prefercar_code">选择车辆语言(%s)而非手机语言</string>
     <string name="lbl_language_forcelanguage">强制语言</string>
-    <string name="lbl_analytics_intro">AAIdrive是一个非官方的项目，没有以任何方式得到BMW的支持或认可，基于逆向工程的协议实现。 我对其功能和稳定性感到自豪，但崩溃可能仍然发生。请考虑启用分析功能来自动发送任何崩溃报告以便帮助改进应用程序。</string>
+    <string name="lbl_analytics_intro">AAiDrive是一个非官方的项目，没有以任何方式得到BMW的支持或认可，基于逆向工程的协议实现。 我对其功能和稳定性感到自豪，但崩溃可能仍然发生。请考虑启用分析功能来自动发送任何崩溃报告以便帮助改进应用程序。</string>
     <string name="lbl_analytics_description">开启分析功能，除了崩溃报告外，还会上传已安装音乐应用列表和一些匿名的车辆信息，以帮助开发应用功能。</string>
     <string name="lbl_analytics_enabled">启用分析和崩溃报告上传功能</string>
-    <string name="lbl_donations_volunteer">AAIdrive是一个非盈利项目</string>
+    <string name="lbl_donations_volunteer">AAiDrive是一个非盈利项目</string>
     <string name="lbl_donations_request">如果你喜欢使用，请通过捐款支持我们:</string>
     <string name="btn_donations">捐款</string>
     <string name="lbl_support_other_ways">其他支持我们的方式:</string>
     <string name="lbl_support_feedback">提供反馈</string>
     <string name="lbl_support_issues">提交问题</string>
     <string name="lbl_support_share">告诉朋友</string>
-    <string name="lbl_support_privacy">隐私非常重要，因此AAIdrive不会收集、存储或共享您的个人数据。点击此处了解更多内容。</string>
-    <string name="lbl_support_thanks">感谢您使用 AAIdrive!</string>
+    <string name="lbl_support_privacy">隐私非常重要，因此AAiDrive不会收集、存储或共享您的个人数据。点击此处了解更多内容。</string>
+    <string name="lbl_support_thanks">感谢您使用 AAiDrive!</string>
     <string name="lbl_ok">确认</string>
     <string name="lbl_cancel">取消</string>
     <string name="btn_configure">设置 …</string>
@@ -195,7 +195,7 @@
     <string name="txt_setup_security_missing">无法连接安全服务:</string>
     <string name="txt_setup_background_killed">应用在连接到汽车时被系统终止</string>
     <string name="txt_setup_background_suspended">应用在连接到汽车时被系统暂停后台运行</string>
-    <string name="txt_setup_background_restrictions_hint">检查您手机的后台运行和电池节能设置，允许AAIdrive在后台运行</string>
+    <string name="txt_setup_background_restrictions_hint">检查您手机的后台运行和电池节能设置，允许AAiDrive在后台运行</string>
     <string name="btn_install">安装</string>
     <string name="btn_install_bmwmine">安装 MyBMW app</string>
     <string name="btn_install_minimine">安装 Mini app</string>
@@ -434,7 +434,7 @@
     <string name="MUSIC_TURN_REPEAT_ALL_ON">打开全部循环</string>
     <string name="MUSIC_TURN_REPEAT_ONE_ON">打开单曲循环</string>
     <string name="MUSIC_TURN_REPEAT_OFF">关闭循环</string>
-    <string name="MUSIC_TEMPORARY_PLAYLIST_DESCRIPTION">AAIdrive 临时播放列表</string>
+    <string name="MUSIC_TEMPORARY_PLAYLIST_DESCRIPTION">AAiDrive 临时播放列表</string>
     <plurals name="MUSIC_ACTION_SEEK_BACK">
         <item quantity="other">回退 %s 秒</item>
     </plurals>

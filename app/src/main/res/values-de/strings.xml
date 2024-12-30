@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AAIdrive</string>
-    <string name="permlab_accessNotifications">IDrive Zugriff auf Benachrichtigungen</string>
-    <string name="permlab_bindNotificationListenerService">IDrive Zugriff auf Benachrichtigungen</string>
-    <string name="permdesc_accessNotifications">IDrive Zugriff auf Benachrichtigungen</string>
-    <string name="permdesc_bindNotificationListenerService">IDrive Zugriff auf Benachrichtigungen</string>
-    <string name="notification_title">AAIdrive</string>
+    <string name="app_name">AAiDrive</string>
+    <string name="permlab_accessNotifications">iDrive Zugriff auf Benachrichtigungen</string>
+    <string name="permlab_bindNotificationListenerService">iDrive Zugriff auf Benachrichtigungen</string>
+    <string name="permdesc_accessNotifications">iDrive Zugriff auf Benachrichtigungen</string>
+    <string name="permdesc_bindNotificationListenerService">iDrive Zugriff auf Benachrichtigungen</string>
+    <string name="notification_title">AAiDrive</string>
     <string name="notification_description">Verbunden mit Fahrzeug</string>
     <string name="notification_description_chassiscode">Verbunden mit %s</string>
     <string name="notification_description_bmw">Verbunden mit BMW</string>
@@ -31,10 +31,10 @@
     <string name="lbl_navigation_listener_unsuccess">Erfolglos</string>
     <!-- Welcome pages -->
     <string name="lbl_welcome_heading">Lass uns eine Verbindung herstellen</string>
-    <string name="lbl_welcome_intro">AAIdrive ist eine inoffizielle App, welche es erlaubt die Musik-Apps des Telefons und andere Features zu Ihrem Auto hinzuzufügen. Es wird hierbei das native \"BMW Apps\"-Protokoll verwendet</string>
+    <string name="lbl_welcome_intro">AAiDrive ist eine inoffizielle App, welche es erlaubt die Musik-Apps des Telefons und andere Features zu Ihrem Auto hinzuzufügen. Es wird hierbei das native \"BMW Apps\"-Protokoll verwendet</string>
     <string name="lbl_welcome_compatible">Es sollten die meisten neueren BMW und Mini Modelle (BJ 2014 oder neuer), welche mit einem NBT oder NBT Evo (basierend auf iDrive 4-6) ausgestattet sind und über ConnectedDrive oder einem BMW Online Abo verfügen kompatibel sein</string>
     <string name="lbl_welcome_dependencies">Die App Verbindung zum Auto hängt von der BMW/MINI Connected App oder der neuen My BMW oder Mini App ab</string>
-    <string name="lbl_welcome_complete">AAIdrive fügt auch eine Vielzahl weiterer Features zum Auto hinzu. Probieren Sie es aus!</string>
+    <string name="lbl_welcome_complete">AAiDrive fügt auch eine Vielzahl weiterer Features zum Auto hinzu. Probieren Sie es aus!</string>
     <!-- Menu Titles -->
     <string name="menu_overview">Überblick</string>
     <string name="menu_setup">Einrichtung</string>
@@ -50,7 +50,7 @@
     <string name="menu_settings">Einstellungen</string>
     <string name="menu_support">Unterstützung</string>
     <string name="btn_next">Weiter</string>
-    <string name="lbl_overviewpage">AAIdrive integriert einige der Musik-Apps Ihres Telefons und die Benachrichtigungen Ihres Telefons über das benutzerdefinierte BMW Apps-Protokoll in Ihr Auto</string>
+    <string name="lbl_overviewpage">AAiDrive integriert einige der Musik-Apps Ihres Telefons und die Benachrichtigungen Ihres Telefons über das benutzerdefinierte BMW Apps-Protokoll in Ihr Auto</string>
     <string name="lbl_connectionpage">Die Verbindung der Apps zum Auto hängt von einigen Teilen ab. Hier einige Hinweise, um sicherzustellen, dass es gut funktioniert</string>
     <plurals name="lbl_assistantpage">
         <item quantity="one">Der Sprachassistent Ihres Telefons wird als verbundene App hinzugefügt, falls die Spracheingabe des Fahrzeugs dies nicht auslöst</item>
@@ -86,7 +86,7 @@
     <string name="lbl_calendar_calendars_empty">Keine Kalender gefunden</string>
     <string name="lbl_calendar_upcoming_events">Bevorstehende Ereignisse:</string>
     <string name="lbl_calendar_upcoming_events_empty">Keine anstehenden Termine in diesem Monat gefunden</string>
-    <string name="lbl_mapspage">AAIdrive enthält eine benutzerdefinierte Karte, die intern am Telefon dargestellt und im Auto angezeigt wird</string>
+    <string name="lbl_mapspage">AAiDrive enthält eine benutzerdefinierte Karte, die intern am Telefon dargestellt und im Auto angezeigt wird</string>
     <string name="enable_custom_maps">Benutzerdefinierte Karte aktivieren</string>
     <string name="lbl_map_bt_hint">Die Performance bei der Darstellung der Karten und die Qualität der Karten ist schlecht, wenn das Gerät über Bluetooth verbunden ist</string>
     <string name="lbl_map_phone_gps">GPS vom Telefon anstelle der GPS Signale des Autos verwenden</string>
@@ -153,18 +153,18 @@
     <string name="lbl_language_prefercar">Spracheinstellung des Fahrzeugs gegenüber Telefonsprache bevorzugen</string>
     <string name="lbl_language_prefercar_code">Spracheinstellung des Fahrzeugs (%s) gegenüber Telefonsprache bevorzugen</string>
     <string name="lbl_language_forcelanguage">Spezifische Sprache verwenden</string>
-    <string name="lbl_analytics_intro">AAIdrive ist ein inoffizielles Hobbyprojekt, das in keiner Weise von BMW unterstützt oder empfohlen wird und auf einem nachgebauten Protokoll aufbaut. Ich bin stolz auf seine Funktionen und Zuverlässigkeit, aber Abstürze können trotzdem vorkommen. Bitte erwägen Sie, die Analysefunktion zu aktivieren, um automatisch Berichte über Abstürze zur Fehlerbehebung zu senden.</string>
+    <string name="lbl_analytics_intro">AAiDrive ist ein inoffizielles Hobbyprojekt, das in keiner Weise von BMW unterstützt oder empfohlen wird und auf einem nachgebauten Protokoll aufbaut. Ich bin stolz auf seine Funktionen und Zuverlässigkeit, aber Abstürze können trotzdem vorkommen. Bitte erwägen Sie, die Analysefunktion zu aktivieren, um automatisch Berichte über Abstürze zur Fehlerbehebung zu senden.</string>
     <string name="lbl_analytics_description">Neben den Absturzberichten werden durch die Aktivierung der Analysefunktion auch die Liste der installierten Musik-Apps und einige anonyme Fahrzeugdaten hochgeladen, um die Weiterentwicklung der Funktionen zu priorisieren.</string>
     <string name="lbl_analytics_enabled">Analyse- und Absturzberichte aktivieren</string>
-    <string name="lbl_donations_volunteer">AAIdrive ist ein Freiwilligenprojekt</string>
+    <string name="lbl_donations_volunteer">AAiDrive ist ein Freiwilligenprojekt</string>
     <string name="lbl_donations_request">Wenn Ihnen dieses Projekt gefällt und Sie es nützlich finden, können Sie Ihre Unterstützung durch eine Spende zeigen:</string>
     <string name="btn_donations">Spenden</string>
     <string name="lbl_support_other_ways">Sie können das Projekt auch auf andere Weise unterstützen:</string>
     <string name="lbl_support_feedback">Feedback geben</string>
     <string name="lbl_support_issues">Öffne Tickets</string>
     <string name="lbl_support_share">Weitersagen</string>
-    <string name="lbl_support_privacy">Datenschutz ist wichtig, weshalb AAIdrive personenbezogene Daten nicht erfasst, speichert oder weitergibt. Tippe hier, um mehr zu erfahren…</string>
-    <string name="lbl_support_thanks">Vielen Dank, dass Sie AAIdrive verwenden!</string>
+    <string name="lbl_support_privacy">Datenschutz ist wichtig, weshalb AAiDrive personenbezogene Daten nicht erfasst, speichert oder weitergibt. Tippe hier, um mehr zu erfahren…</string>
+    <string name="lbl_support_thanks">Vielen Dank, dass Sie AAiDrive verwenden!</string>
     <string name="lbl_ok">OK</string>
     <string name="lbl_cancel">Abbrechen</string>
     <string name="btn_configure">Konfigurieren …</string>
@@ -201,7 +201,7 @@
     <string name="txt_setup_security_missing">Security Service ist nicht erreichbar:</string>
     <string name="txt_setup_background_killed">Die App wurde beim Verbinden mit dem Auto beendet</string>
     <string name="txt_setup_background_suspended">Die App wurde im Hintergrund angehalten, während sie mit dem Auto verbunden war</string>
-    <string name="txt_setup_background_restrictions_hint">Überprüfe die Einstellungen zur Hintergrundaktivität von Apps und die Akku-Einstellungen auf deinem Gerät, damit AAIdrive im Hintergrund ausgeführt werden kann</string>
+    <string name="txt_setup_background_restrictions_hint">Überprüfe die Einstellungen zur Hintergrundaktivität von Apps und die Akku-Einstellungen auf deinem Gerät, damit AAiDrive im Hintergrund ausgeführt werden kann</string>
     <string name="btn_install">Installieren</string>
     <string name="btn_install_bmwmine">Installieren Sie die MyBMW-App</string>
     <string name="btn_install_minimine">Installieren Sie die MINI-App</string>
@@ -472,7 +472,7 @@
     <string name="MUSIC_TURN_REPEAT_ALL_ON">Alle Wiederholen aktivieren</string>
     <string name="MUSIC_TURN_REPEAT_ONE_ON">Einzelnen Titel wiederholen</string>
     <string name="MUSIC_TURN_REPEAT_OFF">Wiederholen deaktivieren</string>
-    <string name="MUSIC_TEMPORARY_PLAYLIST_DESCRIPTION">AAIdrive temporäre Wiedergabeliste</string>
+    <string name="MUSIC_TEMPORARY_PLAYLIST_DESCRIPTION">AAiDrive temporäre Wiedergabeliste</string>
     <plurals name="MUSIC_ACTION_SEEK_BACK">
         <item quantity="one">%s Sekunde zurückspulen</item>
         <item quantity="other">%s Sekunden zurückspulen</item>

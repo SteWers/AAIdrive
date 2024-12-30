@@ -26,7 +26,7 @@ jobs:
         map: [Nomap, Gmap, Mapbox]
         analytics: [Nonalytics, Sentry]
         hasSecret:
-          - ${{ github.repository == 'BimmerGestalt/AAIdrive' && github.event_name == 'push' }}
+          - ${{ github.repository == 'BimmerGestalt/AAiDrive' && github.event_name == 'push' }}
         exclude:  # don't run Mapbox tests if we are in a context that doesn't have the Mapbox secret
           - hasSecret: false
             map: Mapbox   # Mapbox requires secrets to build
@@ -45,7 +45,7 @@ jobs:
       - name: Prepare cached external dependencies
         uses: actions/cache@v4
         with:
-          key: aaidrive_external_${{ hashFiles('.github/actions/download-externals-action/download.sh') }}
+          key: AAiDrive_external_${{ hashFiles('.github/actions/download-externals-action/download.sh') }}
           path: |
             external
       - name: Download build dependencies
@@ -75,7 +75,7 @@ jobs:
       matrix:
         map: [Nomap, Gmap, Mapbox]
         hasSecret:
-          - ${{ github.repository == 'BimmerGestalt/AAIdrive' && github.event_name == 'push' }}
+          - ${{ github.repository == 'BimmerGestalt/AAiDrive' && github.event_name == 'push' }}
         exclude:  # don't run Gmap tests if we are in a context that doesn't have the gmap secret
           - hasSecret: false
             map: Gmap
@@ -100,7 +100,7 @@ jobs:
       - name: Prepare cached external dependencies
         uses: actions/cache@v4
         with:
-          key: aaidrive_external_${{ hashFiles('.github/actions/download-externals-action/download.sh') }}
+          key: AAiDrive_external_${{ hashFiles('.github/actions/download-externals-action/download.sh') }}
           path: |
             external
       - name: Download build dependencies
@@ -159,7 +159,7 @@ jobs:
 
   package:
     # Only build on the main repo, which has the secrets configured
-    if: github.repository == 'BimmerGestalt/AAIdrive' && github.event_name == 'push'
+    if: github.repository == 'BimmerGestalt/AAiDrive' && github.event_name == 'push'
     needs: [unitTest]  # wait for the tests to succeed
     runs-on: ubuntu-latest
     steps:
@@ -177,7 +177,7 @@ jobs:
       - name: Prepare cached external dependencies
         uses: actions/cache@v4
         with:
-          key: aaidrive_external_${{ hashFiles('.github/actions/download-externals-action/download.sh') }}
+          key: AAiDrive_external_${{ hashFiles('.github/actions/download-externals-action/download.sh') }}
           path: |
             external
       - name: Download build dependencies
@@ -230,7 +230,7 @@ jobs:
         uses: shallwefootball/s3-upload-action@v1.3.0
         with:
           source_dir: dist
-          destination_dir: aaidrive/builds
+          destination_dir: AAiDrive/builds
           aws_bucket: bimmergestalt
           aws_key_id: ${{ secrets.AWS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

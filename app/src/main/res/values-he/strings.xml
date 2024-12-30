@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AAIdrive</string>
+    <string name="app_name">AAiDrive</string>
     <string name="permlab_accessNotifications">Idrive התראת גישה</string>
     <string name="permlab_bindNotificationListenerService">Idrive התראת גישה</string>
     <string name="permdesc_accessNotifications">Idrive התראת גישה</string>
     <string name="permdesc_bindNotificationListenerService">Idrive התראת גישה</string>
-    <string name="notification_title">AAIdrive</string>
+    <string name="notification_title">AAiDrive</string>
     <string name="notification_description">מחובר לרכב</string>
     <string name="notification_description_chassiscode">מחובר ל- %s</string>
     <string name="notification_description_bmw">מחובר אל BMW</string>
@@ -30,10 +30,10 @@
     <string name="lbl_navigation_listener_unsuccess">נכשל</string>
     <!-- Welcome pages -->
     <string name="lbl_welcome_heading">Let\'s get you connected</string>
-    <string name="lbl_welcome_intro">AAIdrive הינה אפליקציה לא רשמית עבור רכבי BMW ו-MINI להוספת אפליקציות מוזיקה ואפשרויות נוספות ישירות מהטלפון אל הרכב באמצעות BMW Apps Protocol</string>
+    <string name="lbl_welcome_intro">AAiDrive הינה אפליקציה לא רשמית עבור רכבי BMW ו-MINI להוספת אפליקציות מוזיקה ואפשרויות נוספות ישירות מהטלפון אל הרכב באמצעות BMW Apps Protocol</string>
     <string name="lbl_welcome_compatible">רוב רכבי BMW ו-MINI מעל שנת 2014, המצוידות במערכת NBT או NBT EVO (מבוססת Idrive 4-6) יתאימו, ובנוסף חשבון דרך אפליקצית MY BMW או CONNECTED DRIVE - הרשמה חינם</string>
     <string name="lbl_welcome_dependencies">האפליקציות מתווספות אל הרכב בעזרת אפליקצית CONNECTED DRIVE או MyBMW</string>
-    <string name="lbl_welcome_complete">AAIdrive מוסיפה אפשרויות נוספות לרכב, כדאי לבדוק!</string>
+    <string name="lbl_welcome_complete">AAiDrive מוסיפה אפשרויות נוספות לרכב, כדאי לבדוק!</string>
     <!-- Menu Titles -->
     <string name="menu_overview">סקירה כללית</string>
     <string name="menu_setup">הגדרות</string>
@@ -48,7 +48,7 @@
     <string name="menu_settings">הגדרות</string>
     <string name="menu_support">תמיכה</string>
     <string name="btn_next">הבא</string>
-    <string name="lbl_overviewpage">AAIdrive מתממשקת אל אפליקציות המוזיקה והתראות של הטלפון באמצעות BMW Apps Protocol</string>
+    <string name="lbl_overviewpage">AAiDrive מתממשקת אל אפליקציות המוזיקה והתראות של הטלפון באמצעות BMW Apps Protocol</string>
     <string name="lbl_connectionpage">האפליקציה תלויה במספר אפשרויות כדי לעבוד, הנה כמה טיפים שיעזרו לכם לוודא שהכל עובד תקין</string>
     <string name="lbl_assistantpage_tip">אפליקציות אלו שונות מלחצן \"עזרה קולית\" הנשלט מההגה, אשר מפעיל את העוזר הקולי הראשי של המכשיר, והם נשלטות בנפרד</string>
     <string name="lbl_notificationpage">התראות נכנסות ניתנות לצפייה ולשליטה מהרכב</string>
@@ -121,7 +121,7 @@
     <string name="lbl_language_prefercar_code">בחר בשפת הרכב (%s) ולא בשפת הטלפון</string>
     <string name="lbl_language_forcelanguage">כפה שפה ספציפית</string>
     <string name="btn_donations">תרומה</string>
-    <string name="lbl_support_thanks">תודה לכם על האמון והשימוש בAAIdrive!</string>
+    <string name="lbl_support_thanks">תודה לכם על האמון והשימוש בAAiDrive!</string>
     <string name="lbl_ok">אישור</string>
     <string name="lbl_cancel">ביטול</string>
     <string name="btn_configure">הגדר…</string>

@@ -1,62 +1,62 @@
-AAIdrive
+AAiDrive
 ========
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/BimmerGestalt/AAIdrive/android-build.yml?branch=main)](https://github.com/BimmerGestalt/AAIdrive/actions?query=workflow%3Abuild)
-[![Code Coverage](https://img.shields.io/codecov/c/gh/BimmerGestalt/AAIdrive/main.svg)](https://codecov.io/gh/BimmerGestalt/AAIdrive)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/BimmerGestalt/AAiDrive/android-build.yml?branch=main)](https://github.com/BimmerGestalt/AAiDrive/actions?query=workflow%3Abuild)
+[![Code Coverage](https://img.shields.io/codecov/c/gh/BimmerGestalt/AAiDrive/main.svg)](https://codecov.io/gh/BimmerGestalt/AAiDrive)
 [![Crowdin](https://badges.crowdin.net/androidautoidrive/localized.svg)](https://crowdin.com/project/androidautoidrive)
-[![Release Download](https://img.shields.io/github/release/BimmerGestalt/AAIdrive.svg)](https://github.com/BimmerGestalt/AAIdrive/releases/latest)
+[![Release Download](https://img.shields.io/github/release/BimmerGestalt/AAiDrive.svg)](https://github.com/BimmerGestalt/AAiDrive/releases/latest)
 [![Gitter](https://badges.gitter.im/AndroidAutoIdrive/community.svg)](https://gitter.im/AndroidAutoIdrive/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Buy Me A Coffee](https://img.shields.io/badge/support-buymeacoffee-5f7fff)](https://www.buymeacoffee.com/q4JVoxz)
-![MIT Licensed](https://img.shields.io/github/license/BimmerGestalt/AAIdrive)
+![MIT Licensed](https://img.shields.io/github/license/BimmerGestalt/AAiDrive)
 
 <a href="https://play.google.com/store/apps/details?id=me.hufman.androidautoidrive"><img height="60" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"/></a>
 
 The BMW/Mini IDrive NBT does not offer native Android Auto integration, but does provide a very powerful Connected Apps convergence option with tight integration points into the car. This project is an effort to implement most of the features of Android Auto as unofficial BMW/Mini Connected Apps.
 
-By relying on the Connected Apps technology, this app greatly extends the functionality of the car without any modifications or hacks. Any MY2014 or newer BMW or Mini equipped with NBT or NBT Evo and the "BMW Apps (6NR)" feature, an active [BMW ConnectedDrive subscription](https://bimmergestalt.github.io/AAIdrive/images/bmw-connected-subscription.png), or the "Mini Connected (SA6NM)" option should be compatible.
+By relying on the Connected Apps technology, this app greatly extends the functionality of the car without any modifications or hacks. Any MY2014 or newer BMW or Mini equipped with NBT or NBT Evo and the "BMW Apps (6NR)" feature, an active [BMW ConnectedDrive subscription](https://bimmergestalt.github.io/AAiDrive/images/bmw-connected-subscription.png), or the "Mini Connected (SA6NM)" option should be compatible.
 
-[![App List](docs/images/demo-applist.gif)<br />Gallery](https://bimmergestalt.github.io/AAIdrive/gallery.html)
+[![App List](docs/images/demo-applist.gif)<br />Gallery](https://bimmergestalt.github.io/AAiDrive/gallery.html)
 
 Overview
 --------
 
 As part of the Connected Apps feature, when the phone connects to the car over USB (or Bluetooth in 2017+ models), enabled phone apps can show a special dashboard-optimized interface in the car.
 
-AAIdrive, combined with the safety benefits of the tactile IDrive controller, builds on this protocol to allow the user to interact with their incoming notifications and control their phone's music while the phone is safely tucked away.
+AAiDrive, combined with the safety benefits of the tactile IDrive controller, builds on this protocol to allow the user to interact with their incoming notifications and control their phone's music while the phone is safely tucked away.
 
 Getting Started
 ---------------
 
 This app requires that the MyBMW or MINI app for your car is installed and that it can successfully enable your ID5+ car's [Apps checkbox](app/src/main/res/drawable/pic_btapp_bmw.jpg), or if your ID4 car has the [Connection Assistant option](app/src/main/res/drawable/pic_connassistant_bmw.jpg).
 
-Download the APK of the latest stable release from the [Releases page](https://github.com/BimmerGestalt/AAIdrive/releases/latest). Choose the one that says "sentry" to automatically upload crash reports, or choose "nonalytics" otherwise. It is also available on the [Google Play Store](https://play.google.com/store/apps/details?id=me.hufman.androidautoidrive). After starting, the app should detect the MyBMW app and start waiting for the car connection.
+Download the APK of the latest stable release from the [Releases page](https://github.com/BimmerGestalt/AAiDrive/releases/latest). Choose the one that says "sentry" to automatically upload crash reports, or choose "nonalytics" otherwise. It is also available on the [Google Play Store](https://play.google.com/store/apps/details?id=me.hufman.androidautoidrive). After starting, the app should detect the MyBMW app and start waiting for the car connection.
 
-Also consider trying out the nightly build! It has the latest features and is a preview of the next release, so please consider installing the [Sentry build](https://bimmergestalt.s3.amazonaws.com/aaidrive/builds/androidautoidrive-latest-main-mapbox-sentry-release.apk) to automatically report crashes.
-The [nonalytics](https://bimmergestalt.s3.amazonaws.com/aaidrive/builds/androidautoidrive-latest-main-mapbox-nonalytics-release.apk) build is available too.
+Also consider trying out the nightly build! It has the latest features and is a preview of the next release, so please consider installing the [Sentry build](https://bimmergestalt.s3.amazonaws.com/AAiDrive/builds/androidautoidrive-latest-main-mapbox-sentry-release.apk) to automatically report crashes.
+The [nonalytics](https://bimmergestalt.s3.amazonaws.com/AAiDrive/builds/androidautoidrive-latest-main-mapbox-nonalytics-release.apk) build is available too.
 
-Check out the [FAQ](https://bimmergestalt.github.io/AAIdrive/faq.html) if you run into problems.
+Check out the [FAQ](https://bimmergestalt.github.io/AAiDrive/faq.html) if you run into problems.
 
 User Guide
 ----------
 
-![Phone Connection](https://bimmergestalt.github.io/AAIdrive/images/screenshot-connection.png)
+![Phone Connection](https://bimmergestalt.github.io/AAiDrive/images/screenshot-connection.png)
 
 After connecting the phone to the car, the official MyBMW app should show this car icon in the status bar. When this icon appears, this app should connect and add its functionality to the car.
 
-See [this guide](https://bimmergestalt.github.io/AAIdrive/connection.html) for tips on improving the connection reliability of the MyBMW app.
+See [this guide](https://bimmergestalt.github.io/AAiDrive/connection.html) for tips on improving the connection reliability of the MyBMW app.
 
-![Phone App List](https://bimmergestalt.github.io/AAIdrive/images/screenshot-phoneapps.jpg)
+![Phone App List](https://bimmergestalt.github.io/AAiDrive/images/screenshot-phoneapps.jpg)
 
 After all the apps are connected, a bunch of new entries will show up in the car's Connected menu. There should be a new Audioplayer or Spotify icon and a book icon with no label. This book icon is the Notifications app, if enabled.
 
-![Music App List](https://bimmergestalt.github.io/AAIdrive/images/screenshot-medialist.jpg)
+![Music App List](https://bimmergestalt.github.io/AAiDrive/images/screenshot-medialist.jpg)
 
 Several new entries will be added to the Media section of the control screen. The Audioplayer icon is the one with the main functionality, while the other displayed apps above the Audioplayer are quick shortcuts to switch playback to the respective apps. This screenshot also shows the legacy Spotify app at the bottom of the list.
 
 Development Status
 ------------------
 
-AAIdrive is feature-complete, implementing as many Android Auto features as are possible within the BMW app system, and several more. Beyond the occasional maintenance patch, this project is complete and won't see any more development.
+AAiDrive is feature-complete, implementing as many Android Auto features as are possible within the BMW app system, and several more. Beyond the occasional maintenance patch, this project is complete and won't see any more development.
 
 Implemented Features
 --------------------
@@ -238,7 +238,7 @@ To communicate to the car, this project relies on the proxy connection that is c
 Developer Guide
 ---------------
 
-To build your own test versions of the app and help contribute to the project, follow [this Developer Guide](https://bimmergestalt.github.io/AAIdrive/developers) to set up your development environment.
+To build your own test versions of the app and help contribute to the project, follow [this Developer Guide](https://bimmergestalt.github.io/AAiDrive/developers) to set up your development environment.
 
 Privacy
 -------
@@ -258,7 +258,7 @@ The app also needs some other information to function, but does not remember any
   - To establish the car connection, the app identifies which BMW and Mini apps are installed
   - The app watches Bluetooth connections to identify when the car is connected
   - Any installed Voice Assistants are discovered to be added to the car
-  - Apps which act as AAIdrive Addons are discovered and presented in the Addons tab
+  - Apps which act as AAiDrive Addons are discovered and presented in the Addons tab
   - If enabled, notifications are read from the phone while connected to the car and then forgotten when disconnected
   - If compiled into the app and then enabled, the custom map feature will use the car or phone's location while displaying the map
 

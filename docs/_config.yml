@@ -6,12 +6,12 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: AAIDrive
+title: AAiDrive
 email: hufman@gmail.com
 description: > # this means to ignore newlines until "homeurl:"
   Implementations of some Android Auto features as unofficial IDrive apps
-homeurl: "https://github.com/BimmerGestalt/AAIdrive"
-baseurl: "/AAIdrive" # the subpath of your site, e.g. /blog
+homeurl: "https://github.com/BimmerGestalt/AAiDrive"
+baseurl: "/AAiDrive" # the subpath of your site, e.g. /blog
 url: "https://bimmergestalt.github.io" # the base hostname & protocol for your site
 github_username:  hufman
 

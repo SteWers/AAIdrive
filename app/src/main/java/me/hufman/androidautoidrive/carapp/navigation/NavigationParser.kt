@@ -19,7 +19,7 @@ class AndroidGeocoderSearcher(context: Context): AddressSearcher {
 	val geocoder = Geocoder(context)
 	override fun search(query: String): Address? {
 		return try {
-			// TODO https://github.com/BimmerGestalt/AAIdrive/issues/729
+			// TODO https://github.com/BimmerGestalt/AAiDrive/issues/729
 			geocoder.getFromLocationName(query, 1)?.getOrNull(0)
 		} catch (e: IOException) {
 			null

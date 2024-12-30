@@ -4,14 +4,14 @@ title: Developer's Guide
 permalink: /developers
 ---
 
-AAIdrive is an open source project that everyone is allowed to compile and modify.
+AAiDrive is an open source project that everyone is allowed to compile and modify.
 As an Android app, it relies on Gradle to download the dependencies and manage the build steps, and provides integration into Android Studio.
 Gradle can sometimes get cranky and need fixing, but most Gradle problems can usually get resolved.
 
 ## Preparation
 
 1. Set up Android Studio, which is the easiest way to build Android apps. Gradle can be used manually too, but configuring the Android SDKs is trickier that way.
-2. Follow the instructions in [external/README.md](https://github.com/BimmerGestalt/AAIdrive/tree/main/external) to downloaded the needed APK files from official apps. These will be placed in the `external` directory after the app source code is downloaded.
+2. Follow the instructions in [external/README.md](https://github.com/BimmerGestalt/AAiDrive/tree/main/external) to downloaded the needed APK files from official apps. These will be placed in the `external` directory after the app source code is downloaded.
 3. (To enable gmap build) Add a [Google Maps API key](https://developers.google.com/maps/documentation/android-sdk/signup) to `~/.gradle/gradle.properties` as a property named `AndroidAutoIdrive_GmapsApiKey`.
     - No spaces or quotes are needed around the property value: `AndroidAutoIdrive_GmapsApiKey=AIza...`
     - This key should have access to Maps SDK for Android, Places API, and Directions API.
@@ -43,7 +43,7 @@ These API keys can be set directly in the `gradle.properties` in the repository,
     ![External Dependencies Missing Error](images/developer-externalmissing.png)
 
   - The project can also be cloned with Git manually:
-    - `git clone --recursive https://github.com/BimmerGestalt/AAIdrive.git && cd AAIdrive`
+    - `git clone --recursive https://github.com/BimmerGestalt/AAiDrive.git && cd AAiDrive`
     - `git submodule init && git submodule update`
     - Copy the APKs from the preparation steps to the `externals` folder of the new repository
 
@@ -73,7 +73,7 @@ The built APKs should be found in `app/build/outputs/apk/*/*/*.apk`
 
 For the convenience and speed of building the app, the project is set up to rely on pre-built releases of the IDriveConnectKit and IDriveConnectKitAndroid helper libraries.
 However, some advanced development tasks (such as editing these libraries and testing the overall app with the changes) are facilitated by using a local development copy of these libraries instead.
-To convert an AAIdrive checkout to use local submodule clones of these libraries, a few steps must be done:
+To convert an AAiDrive checkout to use local submodule clones of these libraries, a few steps must be done:
 
   - Optionally move to a separate development branch: `git checkout -b branch_name`
   - git submodule add https://github.com/BimmerGestalt/IDriveConnectKit.git
@@ -103,7 +103,7 @@ includeBuild 'IDriveConnectKitAndroid'
 
   - Tell Android Studio to File > Sync Project with Gradle Files
 
-Most of these steps are provided by a [helpful commit](https://github.com/BimmerGestalt/AAIdrive/commit/example-submodules) in the AAIdrive repo:
+Most of these steps are provided by a [helpful commit](https://github.com/BimmerGestalt/AAiDrive/commit/example-submodules) in the AAiDrive repo:
 
   - Optionally move to a separate development branch: `git checkout -b branch_name`
   - Apply the change to use submodules for these libraries:

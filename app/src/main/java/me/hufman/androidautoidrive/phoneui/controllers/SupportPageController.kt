@@ -15,28 +15,28 @@ class SupportPageController {
 	}
 	fun onClickFeedback(view: View) {
 		val intent = Intent(Intent.ACTION_VIEW).apply {
-			data = Uri.parse("https://github.com/BimmerGestalt/AAIdrive/discussions")
+			data = Uri.parse("https://github.com/BimmerGestalt/AAiDrive/discussions")
 			flags = Intent.FLAG_ACTIVITY_NEW_TASK
 		}
 		view.context.startActivity(intent)
 	}
 	fun onClickIssues(view: View) {
 		val intent = Intent(Intent.ACTION_VIEW).apply {
-			data = Uri.parse("https://github.com/BimmerGestalt/AAIdrive/issues")
+			data = Uri.parse("https://github.com/BimmerGestalt/AAiDrive/issues")
 			flags = Intent.FLAG_ACTIVITY_NEW_TASK
 		}
 		view.context.startActivity(intent)
 	}
 	fun onClickShare(view: View) {
 		val intent = Intent(Intent.ACTION_VIEW).apply {
-			data = Uri.parse("https://github.com/BimmerGestalt/AAIdrive")
+			data = Uri.parse("https://github.com/BimmerGestalt/AAiDrive")
 			flags = Intent.FLAG_ACTIVITY_NEW_TASK
 		}
 		view.context.startActivity(intent)
 	}
 	fun onClickPrivacy(view: View) {
 		val intent = Intent(Intent.ACTION_VIEW).apply {
-			data = Uri.parse("https://github.com/BimmerGestalt/AAIdrive#privacy")
+			data = Uri.parse("https://github.com/BimmerGestalt/AAiDrive#privacy")
 			flags = Intent.FLAG_ACTIVITY_NEW_TASK
 		}
 		view.context.startActivity(intent)

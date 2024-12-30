@@ -117,7 +117,7 @@ object L {
 	val MUSIC_TURN_REPEAT_ALL_ON by StringResourceDelegate("Turn Repeat All On")
 	val MUSIC_TURN_REPEAT_ONE_ON by StringResourceDelegate("Turn Repeat One On")
 	val MUSIC_TURN_REPEAT_OFF by StringResourceDelegate("Turn Repeat Off")
-	val MUSIC_TEMPORARY_PLAYLIST_DESCRIPTION by StringResourceDelegate("AAIdrive temporary playlist")
+	val MUSIC_TEMPORARY_PLAYLIST_DESCRIPTION by StringResourceDelegate("AAiDrive temporary playlist")
 
 	val MUSIC_ACTION_SEEK_BACK_5 by StringResourceDelegate("Seek back 5 seconds")
 	val MUSIC_ACTION_SEEK_BACK_10 by StringResourceDelegate("Seek back 10 seconds")

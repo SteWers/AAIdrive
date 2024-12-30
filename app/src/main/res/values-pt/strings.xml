@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AAIdrive</string>
+    <string name="app_name">AAiDrive</string>
     <string name="permlab_accessNotifications">Notificação de Acesso IDrive</string>
     <string name="permlab_bindNotificationListenerService">Notificação de Acesso IDrive</string>
     <string name="permdesc_accessNotifications">Notificação de Acesso IDrive</string>
     <string name="permdesc_bindNotificationListenerService">Notificação de Acesso IDrive</string>
-    <string name="notification_title">AAIdrive</string>
+    <string name="notification_title">AAiDrive</string>
     <string name="notification_description">Conectado com veículo</string>
     <string name="notification_description_chassiscode">Conectado com %s</string>
     <string name="notification_description_bmw">Conectado com BMW</string>
@@ -31,10 +31,10 @@
     <string name="lbl_navigation_listener_unsuccess">Sem êxito</string>
     <!-- Welcome pages -->
     <string name="lbl_welcome_heading">Vamos te conectar</string>
-    <string name="lbl_welcome_intro">AAIdrive é um aplicativo não oficial para adicionar os aplicativos de música do seu telefone e outros recursos ao seu carro através do protocolo nativo de aplicativos BMW</string>
+    <string name="lbl_welcome_intro">AAiDrive é um aplicativo não oficial para adicionar os aplicativos de música do seu telefone e outros recursos ao seu carro através do protocolo nativo de aplicativos BMW</string>
     <string name="lbl_welcome_compatible">A maioria dos carros BMW e MINI fabricados a partir de 2014, com o sistema NBT ou NBT Evo (baseado no IDrive 4-6) deve ser compatível se tiver uma assinatura átiva ConnectedDrive ou BMW Online</string>
     <string name="lbl_welcome_dependencies">A app requer a aplicação BMW/MINI Connected ou as novas apps MyBMW ou MINI para se conectar ao seu carro</string>
-    <string name="lbl_welcome_complete">AAIdrive também adiciona uma variedade de outros recursos ao seu carro, veja!</string>
+    <string name="lbl_welcome_complete">AAiDrive também adiciona uma variedade de outros recursos ao seu carro, veja!</string>
     <!-- Menu Titles -->
     <string name="menu_overview">Geral</string>
     <string name="menu_setup">Configuração</string>
@@ -50,7 +50,7 @@
     <string name="menu_settings">Configuração</string>
     <string name="menu_support">Dê o seu apoio</string>
     <string name="btn_next">Seguinte</string>
-    <string name="lbl_overviewpage">O AAIdrive integra algumas apps de música do seu telefone e as notificações do seu telefone no seu carro através dum protocolo personalizado das Apps BMW</string>
+    <string name="lbl_overviewpage">O AAiDrive integra algumas apps de música do seu telefone e as notificações do seu telefone no seu carro através dum protocolo personalizado das Apps BMW</string>
     <string name="lbl_connectionpage">A conexão da aplicação ao carro depende de algumas coisas, e aqui estão algumas dicas para ter a certeza de que tudo está a funcionar como deve de ser</string>
     <plurals name="lbl_assistantpage">
         <item quantity="one">O assistente de voz do seu telefone é adicionado como uma app do BMW Connected, caso a entrada por voz do carro não seja capaz de o acionar</item>
@@ -85,7 +85,7 @@
     <string name="lbl_calendar_calendars_empty">Não foram encontrados calendários</string>
     <string name="lbl_calendar_upcoming_events">Próximos eventos:</string>
     <string name="lbl_calendar_upcoming_events_empty">Nenhum evento encontrado para este mês</string>
-    <string name="lbl_mapspage">O AAIdrive inclui um mapa personalizado que é renderizado internamente no telefone e exibido no carro</string>
+    <string name="lbl_mapspage">O AAiDrive inclui um mapa personalizado que é renderizado internamente no telefone e exibido no carro</string>
     <string name="enable_custom_maps">Habilitar mapa personalizado</string>
     <string name="lbl_map_bt_hint">O desempenho e qualidade do mapa é baixa quando ligado através de Bluetooth</string>
     <string name="lbl_map_phone_gps">Usar GPS do telefone em vez do GPS do carro</string>
@@ -152,18 +152,18 @@
     <string name="lbl_language_prefercar">Preferir idioma do carro ao idioma do telefone</string>
     <string name="lbl_language_prefercar_code">Preferir idioma do carro (%s) ao idioma do telefone</string>
     <string name="lbl_language_forcelanguage">Forçar idioma específico</string>
-    <string name="lbl_analytics_intro">AAIdrive é um projeto não oficial, não suportado ou endossado pela BMW de alguma forma, construido em cima de um protocolo de engenharia reversa. Tenho orgulho da sua funcionalidade e estabilidade, mas falhas ainda podem acontecer. Por favor, considere habilitar a análise para enviar automaticamente quaisquer relatórios de erro para depuração.</string>
+    <string name="lbl_analytics_intro">AAiDrive é um projeto não oficial, não suportado ou endossado pela BMW de alguma forma, construido em cima de um protocolo de engenharia reversa. Tenho orgulho da sua funcionalidade e estabilidade, mas falhas ainda podem acontecer. Por favor, considere habilitar a análise para enviar automaticamente quaisquer relatórios de erro para depuração.</string>
     <string name="lbl_analytics_description">Além dos relatórios de falhas, a ativação das análises também fará o upload da lista de apps de música instaladas e algumas informações anônimas sobre o carro para ajudar a priorizar o desenvolvimento de certas funcionalidades.</string>
     <string name="lbl_analytics_enabled">Habilitar análise e relatório de erro</string>
-    <string name="lbl_donations_volunteer">AAIdrive é um projeto voluntário</string>
+    <string name="lbl_donations_volunteer">AAiDrive é um projeto voluntário</string>
     <string name="lbl_donations_request">Se você gosta deste projeto e o acha útil, considere mostrar seu apoio doando:</string>
     <string name="btn_donations">Doar</string>
     <string name="lbl_support_other_ways">Você também pode apoiar o projeto de outras maneiras:</string>
     <string name="lbl_support_feedback">Fornecer feedback</string>
     <string name="lbl_support_issues">Reportar problemas</string>
     <string name="lbl_support_share">Partilhar</string>
-    <string name="lbl_support_privacy">A privacidade importa, e é por isso que a AAIdrive não guarda, armazena ou compartilha dados pessoais. Clique aqui para saber mais…</string>
-    <string name="lbl_support_thanks">Obrigado por usar o AAIdrive!</string>
+    <string name="lbl_support_privacy">A privacidade importa, e é por isso que a AAiDrive não guarda, armazena ou compartilha dados pessoais. Clique aqui para saber mais…</string>
+    <string name="lbl_support_thanks">Obrigado por usar o AAiDrive!</string>
     <string name="lbl_ok">OK</string>
     <string name="lbl_cancel">Cancelar</string>
     <string name="btn_configure">Configurar …</string>
@@ -196,7 +196,7 @@
     <string name="txt_setup_security_missing">Centro de Segurança não está disponível:</string>
     <string name="txt_setup_background_killed">A app foi encerrada enquanto estava conectada ao carro</string>
     <string name="txt_setup_background_suspended">A app foi pausada em segundo plano enquanto estava conectada ao carro</string>
-    <string name="txt_setup_background_restrictions_hint">Verifique a execução em segundo plano e as configurações de bateria do seu telefone para permitir que a AAIdrive seja executada em segundo plano</string>
+    <string name="txt_setup_background_restrictions_hint">Verifique a execução em segundo plano e as configurações de bateria do seu telefone para permitir que a AAiDrive seja executada em segundo plano</string>
     <string name="btn_install">Instalar</string>
     <string name="btn_install_bmwmine">Instalar a app MyBMW</string>
     <string name="btn_install_minimine">Instalar a nova app Mini</string>
@@ -410,7 +410,7 @@
     <string name="MUSIC_TURN_REPEAT_ALL_ON">Repetir tudo</string>
     <string name="MUSIC_TURN_REPEAT_ONE_ON">Ligar Repetir Uma Vez</string>
     <string name="MUSIC_TURN_REPEAT_OFF">Desligar Repetir Uma Vez</string>
-    <string name="MUSIC_TEMPORARY_PLAYLIST_DESCRIPTION">Playlist temporária AAIdrive</string>
+    <string name="MUSIC_TEMPORARY_PLAYLIST_DESCRIPTION">Playlist temporária AAiDrive</string>
     <plurals name="MUSIC_ACTION_SEEK_BACK">
         <item quantity="one">Voltar atrás %s segundo</item>
         <item quantity="other">Voltar atrás %s segundos</item>
