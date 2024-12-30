@@ -71,7 +71,7 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
 //	val clutchContact = cdsMetrics.clutch.map { "Clutch $it"}
 //	val brakeContact = cdsMetrics.brake.map { "Brake $it ${Integer.toBinaryString(it).padStart(8, '0')}"}
 	val steeringAngle = cdsMetrics.steeringAngle.map {
-		val icon = if (it < -0.49) {"→"} else if (it > 0.49) {"←"} else {"↔"}
+		val icon = if (it <= -0.5) {"→"} else if (it >= 0.5) {"←"} else {"↔"}
 		"$icon % 3.0f°".format(it.absoluteValue)
 	}.map { "$it ${L.CARINFO_STEERING}" }
 	val speed = cdsMetrics.speedActual.format("% 3.0f").addPlainUnit(unitsSpeedLabel)
@@ -86,25 +86,25 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
 
 	val gforces = cdsMetrics.accel.map { accel ->
 		val lat = accel.first?.let {
-			(if (it > 0) {"→"} else if (it < 0) {"←"} else {"↔"}) +
+			(if (it > 0.048) {"→"} else if (it < -0.048) {"←"} else {"↔"}) +  // 0.048 ≈ 0.005 / 9.81
 				"%.2f".format(it.absoluteValue / 9.81)
 		} ?: ""
 		val long = accel.second?.let {
-			(if (it > 0) {"↑"} else if (it < 0) {"↓"} else {"↕"}) +
+			(if (it > 0.048) {"↑"} else if (it < -0.048) {"↓"} else {"↕"}) +  // 0.048 ≈ 0.005 / 9.81
 				"%.2f".format(it.absoluteValue / 9.81)
 		} ?: ""
 		"$lat $long${L.CARINFO_GFORCE}"
 	}
 	val gforceLat = cdsMetrics.accel.map { accel ->
 		val lat = accel.first?.let {
-			(if (it > 0) {"→"} else if (it < 0) {"←"} else {"↔"}) +
+			(if (it > 0.048) {"→"} else if (it < -0.048) {"←"} else {"↔"}) +  // 0.048 ≈ 0.005 / 9.81
 				"%.2f".format(it.absoluteValue / 9.81)
 		} ?: ""
 		"$lat"
 	}
 	val gforceLong = cdsMetrics.accel.map { accel ->
 		val long = accel.second?.let {
-			(if (it > 0) {"↑"} else if (it < 0) {"↓"} else {"↕"}) +
+			(if (it > 0.048) {"↑"} else if (it < -0.048) {"↓"} else {"↕"}) +  // 0.048 ≈ 0.005 / 9.81
 				"%.2f".format(it.absoluteValue / 9.81)
 		} ?: ""
 		"$long${L.CARINFO_GFORCE}"
