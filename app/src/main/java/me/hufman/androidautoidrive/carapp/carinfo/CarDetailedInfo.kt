@@ -86,29 +86,34 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
 
 	val gforces = cdsMetrics.accel.map { accel ->
 		val lat = accel.first?.let {
-			(if (it > 0.048) {"→"} else if (it < -0.048) {"←"} else {"↔"}) +  // 0.048 ≈ 0.005 / 9.81
+			(if (it > 0.048) {"→"} else if (it < -0.048) {"←"} else {"↔"}) +  // 0.048 ≈ 0.005 * 9.81
 				"%.2f".format(it.absoluteValue / 9.81)
 		} ?: ""
 		val long = accel.second?.let {
-			(if (it > 0.048) {"↑"} else if (it < -0.048) {"↓"} else {"↕"}) +  // 0.048 ≈ 0.005 / 9.81
+			(if (it > 0.048) {"↓"} else if (it < -0.048) {"↑"} else {"↕"}) +  // 0.048 ≈ 0.005 * 9.81
 				"%.2f".format(it.absoluteValue / 9.81)
 		} ?: ""
 		"$lat $long${L.CARINFO_GFORCE}"
 	}
 	val gforceLat = cdsMetrics.accel.map { accel ->
 		val lat = accel.first?.let {
-			(if (it > 0.048) {"→"} else if (it < -0.048) {"←"} else {"↔"}) +  // 0.048 ≈ 0.005 / 9.81
+			(if (it > 0.048) {"→"} else if (it < -0.048) {"←"} else {"↔"}) +  // 0.048 ≈ 0.005 * 9.81
 				"%.2f".format(it.absoluteValue / 9.81)
 		} ?: ""
 		"$lat"
 	}
 	val gforceLong = cdsMetrics.accel.map { accel ->
 		val long = accel.second?.let {
-			(if (it > 0.048) {"↑"} else if (it < -0.048) {"↓"} else {"↕"}) +  // 0.048 ≈ 0.005 / 9.81
+			(if (it > 0.048) {"↓"} else if (it < -0.048) {"↑"} else {"↕"}) +  // 0.048 ≈ 0.005 * 9.81
 				"%.2f".format(it.absoluteValue / 9.81)
 		} ?: ""
 		"$long${L.CARINFO_GFORCE}"
 	}
+
+//	val gforces = "$gforceLat $gforceLong${L.CARINFO_GFORCE}" as Flow<String> // aktueller Test
+//	val gforces = flowOf("$gforceLat $gforceLong${L.CARINFO_GFORCE}") // geht nicht
+//	val gforces = cdsMetrics.accel.map { "$gforceLat $gforceLong${L.CARINFO_GFORCE}" } // geht nicht
+//	val gforces = cdsMetrics.accel.map { "$gforceLat $gforceLong${L.CARINFO_GFORCE}" }
 
 	// advanced driving fields that aren't translated
 	val brakeState = cdsMetrics.brake.combine(cdsMetrics.parkingBrakeSet) { brakeContact, parkingBrakeSet ->
