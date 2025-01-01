@@ -15,9 +15,6 @@ The BMW/Mini IDrive NBT does not offer native Android Auto integration, but does
 
 By relying on the Connected Apps technology, this app greatly extends the functionality of the car without any modifications or hacks. Any MY2014 or newer BMW or Mini equipped with NBT or NBT Evo and the "BMW Apps (6NR)" feature, an active [BMW ConnectedDrive subscription](https://bimmergestalt.github.io/AAiDrive/images/bmw-connected-subscription.png), or the "Mini Connected (SA6NM)" option should be compatible.
 
-![App List](https://bimmergestalt.github.io/AAiDrive/images/demo-applist.gif)  
-[Gallery](https://bimmergestalt.github.io/AAiDrive/gallery.html)
-
 Overview
 --------
 
