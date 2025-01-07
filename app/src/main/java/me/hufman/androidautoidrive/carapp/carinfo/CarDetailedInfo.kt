@@ -74,9 +74,9 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
 		val icon = if (it <= -0.5) {"→"} else if (it >= 0.5) {"←"} else {"↔"}
 		"$icon % 3.0f°".format(it.absoluteValue)
 	}.map { "$it ${L.CARINFO_STEERING}" }
-	val speed = cdsMetrics.speedActual.format("% 3.0f").addPlainUnit(unitsSpeedLabel)
-	val speedGPS = cdsMetrics.speedGPS.format("% 3.0f").addPlainUnit(unitsSpeedLabel)
-	val torque =cdsMetrics.torque.format("% 3.0fNm").map { "$it ${L.CARINFO_TORQUE}" }
+	val speed = cdsMetrics.speedActual.format("% 3.0f ").addPlainUnit(unitsSpeedLabel)
+	val speedGPS = cdsMetrics.speedGPS.format("% 3.0f ").addPlainUnit(unitsSpeedLabel).map { "$it ${L.CARINFO_SPEEDGPS}"}
+	val torque =cdsMetrics.torque.format("% 3.0f Nm").map { "$it ${L.CARINFO_TORQUE}" }
 	val engineRpm = cdsMetrics.engineRpm.map { "$it ${L.CARINFO_RPM}"}
 	val heading = cdsMetrics.heading.map { heading ->
 		val direction = CDSMetrics.compassDirection(heading)
@@ -93,20 +93,6 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
 				"%.2f".format(it.absoluteValue / 9.81)
 		} ?: ""
 		"$lat $long${L.CARINFO_GFORCE}"
-	}
-	val gforceLat = cdsMetrics.accel.map { accel ->
-		val lat = accel.first?.let {
-			(if (it > 0.048) {"→"} else if (it < -0.048) {"←"} else {"↔"}) +  // 0.048 ≈ 0.005 * 9.81
-				"%.2f".format(it.absoluteValue / 9.81)
-		} ?: ""
-		"$lat"
-	}
-	val gforceLong = cdsMetrics.accel.map { accel ->
-		val long = accel.second?.let {
-			(if (it > 0.048) {"↓"} else if (it < -0.048) {"↑"} else {"↕"}) +  // 0.048 ≈ 0.005 * 9.81
-				"%.2f".format(it.absoluteValue / 9.81)
-		} ?: ""
-		"$long${L.CARINFO_GFORCE}"
 	}
 
 	// advanced driving fields that aren't translated
@@ -165,7 +151,7 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
 		formatWindowState(name, it)
 	}
 
-	val sunroof = cdsMetrics.sunroof.format("${L.CARINFO_SUNROOF}")
+	val sunroof = cdsMetrics.sunroof.format("") //${L.CARINFO_SUNROOF}")
 	val windowDriverFront = cdsMetrics.windowDriverFront.format("")
 	val windowPassengerFront = cdsMetrics.windowPassengerFront.format("")
 	val windowDriverRear = cdsMetrics.windowDriverRear.format("")
@@ -187,61 +173,61 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
    val ACCompressorActualPower =cdsMetrics.ACCompressorActualPower.format("%.0f").map { "$it ${L.CARINFO_COMPRESSORPOWER}" }
    val ACCompressorDualmode =cdsMetrics.ACCompressorDualMode.mapNotNull {
 		when (it) {
-			1 -> "${L.CARINFO_STATE_OFF}"
-			2 -> "${L.CARINFO_STATE_ON}"
+			1 -> L.CARINFO_STATE_OFF
+			2 -> L.CARINFO_STATE_ON
 			else -> "?"
 		}
 	}.map { "${L.CARINFO_COMPRESSORDUALMODE}: $it" }
 //	val ACActualTorque =cdsMetrics.ACCompressorActualTorque.format("%.0f").map { "$it Torque" }
 	val ACCompressorState = cdsMetrics.ACCompressor.mapNotNull {
-				when (it) {
-					0 -> "${L.CARINFO_STATE_OFF}"
-					1 -> "${L.CARINFO_STATE_ON}"
-					else -> "?"
-				}
+		when (it) {
+			0 -> L.CARINFO_STATE_OFF
+			1 -> L.CARINFO_STATE_ON
+			else -> "?"
+		}
 	}
 	val ACCompressorLevel = cdsMetrics.ACCompressorLevel.format("%.0f%%").map {"$it ${L.CARINFO_COMPRESSORLEVEL}"}
 
 	// categories
 	private val sportFields: List<Flow<String>> = listOf(
-			engineTemp, oilTemp,
-			accelContact, brakeState,
-			engineRpm, torque,
-			drivingGearLabel, steeringAngle,
-			gforceLat, gforceLong
+		engineTemp, oilTemp,
+		accelContact, brakeState,
+		engineRpm, torque,
+		drivingGearLabel, steeringAngle,
+		gforces
 	)
 	private val overviewFields: List<Flow<String>> = listOf(
-			engineTemp, tempExterior,
-			oilTemp, tempInterior,
-			fuelLevelLabel, evLevelLabel,
-			accBatteryLevelLabel,batteryTemp
+		engineTemp, tempExterior,
+		oilTemp, tempInterior,
+		fuelLevelLabel, evLevelLabel,
+		accBatteryLevelLabel,batteryTemp
 	)
 	private val drivingFields: List<Flow<String>> = listOf(
-			drivingMode, drivingGearLabel,
-			accelContact, steeringAngle,
-			speed, heading,
-			gforces, engineRpm
+		drivingMode, drivingGearLabel,
+		accelContact, steeringAngle,
+		speed, heading,
+		gforces, engineRpm
 	)
 	private val drivingAdvancedFields: List<Flow<String>> = listOf(
-			drivingMode, drivingGearLabel,
-			accelContact, brakeState,
-			clutchState, steeringAngle,
-			speed, heading,
-			gforces, engineRpm
+		drivingMode, drivingGearLabel,
+		accelContact, brakeState,
+		clutchState, steeringAngle,
+		speed, heading,
+		gforces, engineRpm
 	)
 	private val drivingPerformanceFields: List<Flow<String>> = listOf(
-			drivingMode, drivingGearLabel,
-			accelContact, steeringAngle,
-			speed, torque,
-			gforces, heading,
-			engineTemp, oilTemp
+		drivingMode, drivingGearLabel,
+		accelContact, steeringAngle,
+		speed, torque,
+		gforces, heading,
+		engineTemp, oilTemp
 	)
 	private val gpsFields: List<Flow<String>> = listOf(
-			countryLabel, heading,
-			cityLabel, altitudeLabel,
-			streetLabel, crossStreetLabel,
-			latitudeLabel, longitudeLabel,
-			speedGPS
+		countryLabel, heading,
+		cityLabel, altitudeLabel,
+		streetLabel, crossStreetLabel,
+		latitudeLabel, longitudeLabel,
+		speedGPS, speed
 	)
 	private val windowFields: List<Flow<String>> = if (!rightHandDrive) {
 		listOf(
@@ -255,14 +241,14 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
 		)
 	} + listOf(
 			emptyFlow(), emptyFlow(),
-			sunroof
-	)
+			flowOf(L.CARINFO_SUNROOF), sunroof
+		)
 	private val ACFields: List<Flow<String>> = listOf(
-			tempExterior, tempInterior,
-			tempEvaporator, tempExchanger,
-			flowOf(L.CARINFO_COMPRESSOR),emptyFlow(),
-			ACCompressorState, ACCompressorDualmode,
-			ACCompressorLevel, ACCompressorActualPower,
+		tempExterior, tempInterior,
+		tempEvaporator, tempExchanger,
+		flowOf(L.CARINFO_COMPRESSOR),emptyFlow(),
+		ACCompressorState, ACCompressorDualmode,
+		ACCompressorLevel, ACCompressorActualPower,
 	)
 
 	val basicCategories = LinkedHashMap<String, List<Flow<String>>>().apply {

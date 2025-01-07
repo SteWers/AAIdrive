@@ -122,8 +122,9 @@ android {
                     proguardFile 'proguard-rules.pro'
                 }
             }
-            testCoverageEnabled false
             pseudoLocalesEnabled true
+            enableUnitTestCoverage false
+            enableAndroidTestCoverage false
         }
     }
     bundle {
