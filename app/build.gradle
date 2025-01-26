@@ -48,7 +48,7 @@ android {
     defaultConfig {
         applicationId "me.hufman.androidautoidrive"
         compileSdk 34
-        minSdkVersion 23
+        minSdkVersion 26
         targetSdkVersion 34
         multiDexEnabled false
         versionCode androidGitVersion.code() + 1
