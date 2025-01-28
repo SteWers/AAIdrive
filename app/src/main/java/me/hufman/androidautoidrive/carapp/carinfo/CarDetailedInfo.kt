@@ -8,7 +8,6 @@ import me.hufman.androidautoidrive.phoneui.FlowUtils.addPlainUnit
 import me.hufman.androidautoidrive.phoneui.FlowUtils.format
 import kotlin.math.absoluteValue
 import java.util.*
-import java.time.*
 import java.time.format.*
 
 class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics) {
