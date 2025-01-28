@@ -8,6 +8,7 @@ import me.hufman.androidautoidrive.phoneui.FlowUtils.addPlainUnit
 import me.hufman.androidautoidrive.phoneui.FlowUtils.format
 import kotlin.math.absoluteValue
 import java.util.*
+import java.time.*
 import java.time.format.*
 
 class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics) {
@@ -219,7 +220,6 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
 		val show = if ((System.currentTimeMillis() / 1000) % 20 < 10) 0 else status
 		if (show == 0) street else time
 	}
-*/
 
 	// *****************************************
 	private val distOrCityLabel = combine(cdsMetrics.navGuidanceStatus, cityLabel, distNextDestLabel, cdsMetrics.carDateTime) { status, city, distance, carTime ->
@@ -230,9 +230,22 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
 		val showTime = carTime.get(Calendar.SECOND) % 30 < 15
 		if (status != 0 && (showTime || street == "")) {
 			String.format("%02d:%02d→", timeLeft / 60, timeLeft % 60) +
-				carTime.toZonedDateTime().plusMinutes(timeLeft.toLong()).format(DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT)) +
-				" ${L.CARINFO_ARRIVAL}"
+					carTime.toZonedDateTime().plusMinutes(timeLeft.toLong()).format(DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT)) +
+					" ${L.CARINFO_ARRIVAL}"
 		}  else street
+	}
+	*/
+
+	// *****************************************
+	private val distOrCityLabel = combine(cdsMetrics.navGuidanceStatus, cityLabel, distNextDestLabel, cdsMetrics.carDateTime) { status, city, distance, carTime ->
+		if (status != 0 && ((carTime.second % 30 < 15) || city == "")) distance else city
+	}
+	private val timeOrStreetLabel = combine(cdsMetrics.navGuidanceStatus, streetLabel, cdsMetrics.navTimeNext, cdsMetrics.carDateTime) { status, street, timeLeft, carTime ->
+		if (status != 0 && ((carTime.second % 30 < 15) || street == ""))
+			String.format("%d:%02d→", timeLeft / 60, timeLeft % 60) +
+					carTime.plusMinutes(timeLeft).format(DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT)) +
+					" ${L.CARINFO_ARRIVAL}"
+		else street
 	}
 
 	// categories
