@@ -53,9 +53,9 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
 
 	private val fuelLevelLabel = cdsMetrics.fuelLevel.format("%.0f").addPlainUnit(unitsFuelLabel).map { "$it ${L.CARINFO_FUEL}"}
 
-	private val totalRangeLevelLabel = cdsMetrics.totalRange.format("%.0f ").addPlainUnit(unitsDistanceLabel).map { "$it ${L.CARINFO_RANGE}"}
-
 	private val accBatteryLevelLabel = cdsMetrics.accBatteryLevel.format("%.0f%%").map { "$it ${L.CARINFO_ACC_BATTERY}"}
+
+	private val totalRangeLabel = cdsMetrics.totalRange.format("%.0f ").addPlainUnit(unitsDistanceLabel).map { "$it ${L.CARINFO_RANGE}"}
 
 	private val engineTemp = cdsMetrics.engineTemp.format("%.0f").addPlainUnit(unitsTemperatureLabel).map { "$it ${L.CARINFO_ENGINE}"}
 	private val oilTemp = cdsMetrics.oilTemp.format("%.0f").addPlainUnit(unitsTemperatureLabel).map { "$it ${L.CARINFO_OIL}"}
@@ -118,7 +118,7 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
 			brakeString = "Soft"
 		}
 		// Adding the parking brake info
-		if (parkingBrakeSet || brakeContact == 16) {
+		if (parkingBrakeSet || brakeContact == 16) {  // alternative value, when parkingBrakeSet is empty
 			if (brakeString == "Not braking") {
 				brakeString = "( ! )"
 			} else {
@@ -193,49 +193,7 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
 	}
 	private val acCompressorLevel = cdsMetrics.ACCompressorLevel.format("%.0f%%").map {"$it ${L.CARINFO_COMPRESSORLEVEL}"}
 
-	private val distNextDestLabel = cdsMetrics.navDistNext.format("%.1f ").addPlainUnit(unitsDistanceLabel).map { "$it ${L.CARINFO_DISTANCE}"}
-
-	/*
-	private val timeNextDestLabel = cdsMetrics.navTimeNext.combine(cdsMetrics.carDateTime) { minutesToGo, timeNow ->
-		timeNow.add(Calendar.MINUTE, minutesToGo)
-		String.format("%02d:%02d→", minutesToGo / 60, minutesToGo % 60) + DateFormat.getTimeInstance(DateFormat.SHORT).format(timeNow.time) + " ${L.CARINFO_ARRIVAL}"
-	}
-	private val showTimeOrStreet = cdsMetrics.navGuidanceStatus.map {
-		if ((System.currentTimeMillis() / 1000) % 20 < 10) 0 else it
-	}
-	private val distOrCityLabel = combine(showTimeOrStreet, cityLabel, distNextDestLabel) { status, city, distance ->
-		if (status == 0) city else distance
-	}
-	private val timeOrStreetLabel = combine(showTimeOrStreet, streetLabel, timeNextDestLabel) { status, street, time ->
-		if (status == 0) street else time
-	}
-
-	// *****************************************
-	private val distOrCityLabel = combine(cdsMetrics.navGuidanceStatus, cityLabel, distNextDestLabel) { status, city, distance ->
-		val show = if ((System.currentTimeMillis() / 1000) % 20 < 10) 0 else status
-		if (show == 0) city else distance
-	}
-	private val timeOrStreetLabel = combine(cdsMetrics.navGuidanceStatus, streetLabel, timeNextDestLabel) { status, street, time ->
-		val show = if ((System.currentTimeMillis() / 1000) % 20 < 10) 0 else status
-		if (show == 0) street else time
-	}
-
-	// *****************************************
-	private val distOrCityLabel = combine(cdsMetrics.navGuidanceStatus, cityLabel, distNextDestLabel, cdsMetrics.carDateTime) { status, city, distance, carTime ->
-		val showTime = carTime.get(Calendar.SECOND) % 30 < 15
-		if (status != 0 && (showTime || city == "")) distance else city
-	}
-	private val timeOrStreetLabel = combine(cdsMetrics.navGuidanceStatus, streetLabel, cdsMetrics.navTimeNext, cdsMetrics.carDateTime) { status, street, timeLeft, carTime ->
-		val showTime = carTime.get(Calendar.SECOND) % 30 < 15
-		if (status != 0 && (showTime || street == "")) {
-			String.format("%02d:%02d→", timeLeft / 60, timeLeft % 60) +
-					carTime.toZonedDateTime().plusMinutes(timeLeft.toLong()).format(DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT)) +
-					" ${L.CARINFO_ARRIVAL}"
-		}  else street
-	}
-	*/
-
-	// *****************************************
+	private val distNextDestLabel = cdsMetrics.navDistNext.format("%.1f ").addPlainUnit(unitsDistanceLabel).map { "$it ${L.CARINFO_NAV_DISTANCE}"}
 	private val distOrCityLabel = combine(cdsMetrics.navGuidanceStatus, cityLabel, distNextDestLabel, cdsMetrics.carDateTime) { status, city, distance, carTime ->
 		if (status != 0 && ((carTime.second % 30 < 15) || city == "")) distance else city
 	}
@@ -243,7 +201,7 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
 		if (status != 0 && ((carTime.second % 30 < 15) || street == ""))
 			String.format("%d:%02d→", timeLeft / 60, timeLeft % 60) +
 					carTime.plusMinutes(timeLeft).format(DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT)) +
-					" ${L.CARINFO_ARRIVAL}"
+					" ${L.CARINFO_NAV_ETA}"
 		else street
 	}
 
@@ -286,7 +244,7 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
 		cityLabel, altitudeLabel,
 		streetLabel, crossStreetLabel,
 		latitudeLabel, longitudeLabel,
-		speedGPS, speed
+		speedGPS
 	)
 	private val windowFields: List<Flow<String>> = if (!rightHandDrive) {
 		listOf(
@@ -312,8 +270,8 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
 	private val travelFields: List<Flow<String>> = listOf(
 		speed, drivingGearLabel,
 		altitudeLabel, tempExterior,
-		accBatteryLevelLabel, fuelLevelLabel,
-		totalRangeLevelLabel, emptyFlow(),
+		accBatteryLevelLabel, tempInterior,
+		totalRangeLabel, fuelLevelLabel,
 		distOrCityLabel, timeOrStreetLabel
 	)
 

@@ -449,8 +449,8 @@
     <string name="CARINFO_GPSALTITUDE">Altitude</string>
     <string name="CARINFO_GPSLATITUDE">Lat</string>
     <string name="CARINFO_GPSLONGITUDE">Long</string>
-    <string name="CARINFO_DISTANCE">Distance</string>
-    <string name="CARINFO_ARRIVAL">ETA</string>
+    <string name="CARINFO_NAV_DISTANCE">Distance</string>
+    <string name="CARINFO_NAV_ETA">ETA</string>
     <string name="NOTIFICATIONS_TITLE">Notifications</string>
     <string name="NOTIFICATIONS_EMPTY_LIST">No Notifications</string>
     <string name="NOTIFICATION_CLEAR_ACTION">Clear</string>
