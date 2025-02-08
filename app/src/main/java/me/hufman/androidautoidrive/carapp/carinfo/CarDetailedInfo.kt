@@ -8,6 +8,7 @@ import me.hufman.androidautoidrive.phoneui.FlowUtils.addPlainUnit
 import me.hufman.androidautoidrive.phoneui.FlowUtils.format
 import kotlin.math.absoluteValue
 import com.soywiz.klock.minutes
+import java.text.SimpleDateFormat
 import java.util.*
 
 class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics) {
@@ -87,6 +88,7 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
 		val arrow = CDSMetrics.compassArrow(heading)
 		"$arrow $direction (${heading.toInt()}°)"
 	}
+/*
 	val gforces = cdsMetrics.accel.map { accel ->
 		val lat = accel.first?.let {
 			(if (it > 0.048) {"→"} else if (it < -0.048) {"←"} else {"↔"}) +  // 0.048 ≈ 0.005 * 9.81
@@ -98,6 +100,8 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
 		} ?: ""
 		"$lat $long${L.CARINFO_GFORCE}"
 	}
+ */
+
 	val gforceLat = cdsMetrics.accel.map { accel ->
 		val lat = accel.first?.let {
 			(if (it > 0.048) {"→"} else if (it < -0.048) {"←"} else {"↔"}) +  // 0.048 ≈ 0.005 * 9.81
@@ -111,6 +115,9 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
 				"%.2f".format(it.absoluteValue / 9.81)
 		} ?: ""
 		"$long${L.CARINFO_GFORCE}"
+	}
+	val gforces = gforceLat.combine(gforceLong) { lat, long ->
+		"$lat $long"
 	}
 
 	// advanced driving fields that aren't translated
@@ -212,6 +219,7 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
 		if (status != 0 && ((carTime.seconds % 30 < 15) || city == "")) distance else city
 	}
 	private val timeOrStreetLabel = combine(cdsMetrics.navGuidanceStatus, streetLabel, cdsMetrics.navTimeNext, cdsMetrics.carDateTime) { status, street, timeLeft, carTime ->
+//		val sdf : SimpleDateFormat = SimpleDateFormat.getTimeInstance(SimpleDateFormat.SHORT, Locale.getDefault()).to
 		if (status != 0 && ((carTime.seconds % 30 < 15) || street == ""))
 			String.format("%d:%02d→", timeLeft / 60, timeLeft % 60) +
 //					carTime.add(0, timeLeft * 60000).format("HH:mm") +
