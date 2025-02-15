@@ -7,9 +7,8 @@ import me.hufman.androidautoidrive.cds.CDSVehicleUnits
 import me.hufman.androidautoidrive.phoneui.FlowUtils.addPlainUnit
 import me.hufman.androidautoidrive.phoneui.FlowUtils.format
 import kotlin.math.absoluteValue
-import com.soywiz.klock.minutes
-import java.text.SimpleDateFormat
 import java.util.*
+import java.text.DateFormat
 
 class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics) {
 	// general car information
@@ -103,18 +102,16 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
  */
 
 	val gforceLat = cdsMetrics.accel.map { accel ->
-		val lat = accel.first?.let {
+		accel.first?.let {
 			(if (it > 0.048) {"→"} else if (it < -0.048) {"←"} else {"↔"}) +  // 0.048 ≈ 0.005 * 9.81
 				"%.2f".format(it.absoluteValue / 9.81)
 		} ?: ""
-		"$lat"
 	}
 	val gforceLong = cdsMetrics.accel.map { accel ->
-		val long = accel.second?.let {
+		accel.second?.let {
 			(if (it > 0.048) {"↓"} else if (it < -0.048) {"↑"} else {"↕"}) +  // 0.048 ≈ 0.005 * 9.81
-				"%.2f".format(it.absoluteValue / 9.81)
+				"%.2f".format(it.absoluteValue / 9.81) + L.CARINFO_GFORCE
 		} ?: ""
-		"$long${L.CARINFO_GFORCE}"
 	}
 	val gforces = gforceLat.combine(gforceLong) { lat, long ->
 		"$lat $long"
@@ -216,15 +213,14 @@ class CarDetailedInfo(carCapabilities: Map<String, Any?>, cdsMetrics: CDSMetrics
 
 	private val distNextDestLabel = cdsMetrics.navDistNext.format("%.1f ").addPlainUnit(unitsDistanceLabel).map { "$it ${L.CARINFO_NAV_DISTANCE}"}
 	private val distOrCityLabel = combine(cdsMetrics.navGuidanceStatus, cityLabel, distNextDestLabel, cdsMetrics.carDateTime) { status, city, distance, carTime ->
-		if (status != 0 && ((carTime.seconds % 30 < 15) || city == "")) distance else city
+		if (status != 0 && ((carTime.get(Calendar.SECOND) % 30 < 15) || city == "")) distance else city
 	}
 	private val timeOrStreetLabel = combine(cdsMetrics.navGuidanceStatus, streetLabel, cdsMetrics.navTimeNext, cdsMetrics.carDateTime) { status, street, timeLeft, carTime ->
-//		val sdf : SimpleDateFormat = SimpleDateFormat.getTimeInstance(SimpleDateFormat.SHORT, Locale.getDefault()).to
-		if (status != 0 && ((carTime.seconds % 30 < 15) || street == ""))
+		val timeETA = carTime.clone() as GregorianCalendar
+		timeETA.add(Calendar.MINUTE, timeLeft)
+		if (status != 0 && ((carTime.get(Calendar.SECOND) % 30 < 15) || street == ""))
 			String.format("%d:%02d→", timeLeft / 60, timeLeft % 60) +
-//					carTime.add(0, timeLeft * 60000).format("HH:mm") +
-					(carTime + timeLeft.minutes).format("HH:mm") +
-//					println(SimpleDateFormat().toLocalizedPattern())
+					DateFormat.getTimeInstance(DateFormat.SHORT).format(timeETA.time) +
 					" ${L.CARINFO_NAV_ETA}"
 		else street
 	}
